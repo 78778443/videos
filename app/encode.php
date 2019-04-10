@@ -15,7 +15,7 @@ $inPath = '/data/videos';
 $dir = __DIR__;
 
 //判断之前是否已经转码,如果不强制转码便先返回
-if (file_exists("$outPath/$fileName/index.m3u8") && empty($forced)) {
+if (file_exists("$outPath/$fileName/index0.ts") && empty($forced)) {
     header("location:./static/{$fileName}/index.m3u8");
     die;
 }
