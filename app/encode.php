@@ -31,7 +31,7 @@ $cmd = "mkdir -p {$outPath}/{$fileName}";
 system($cmd);
 
 //进行转码
-$cmd = "ffmpeg -i '{$inPath}/{$name}'  -hls_time 12 -hls_list_size 0 -f hls -r 25 '{$inPath}/{$fileName}/index.m3u8' >> ./code.log &";
+$cmd = "ffmpeg -i '{$inPath}/{$name}'  -hls_time 12 -hls_list_size 0 -f hls -r 25 '{$inPath}/{$fileName}/index.m3u8' >> /tmp/code.log &";
 system($cmd);
 
 

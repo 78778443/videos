@@ -7,7 +7,7 @@
 2.1 运行容器命令
 
 ```
-docker run --name videos -d -i -p 8811:80 daxia/videos
+docker run --name videos -d -i -p 8811:80   -v /Users/song/files/videos:/data/videos  daxia/videos:latest
 ```
 
 2.2 启动Nginx服务和PHP
@@ -19,7 +19,7 @@ docker exec videos zsh -c "nginx && /usr/sbin/php-fpm7.2 -R"
 2.3 启动FRP链接
 
 ```
-docker exec videos zsh -c "cd /root/files/frp && ./frpc -c frpc.ini >> frp.log"
+docker exec videos zsh -c " /root/files/frp/frpc -c /root/files/frp/frpc.ini  >> frp.log"   &
 ```
 
 
